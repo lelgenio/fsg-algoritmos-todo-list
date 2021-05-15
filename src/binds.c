@@ -23,3 +23,10 @@ void binds_add_keybind(struct Keybinds *keybinds, char key,
     keybinds->items[keybinds->size] = keybind;
     keybinds->size++;
 }
+
+enum Action binds_query_keybind(struct Keybinds *keybinds, char key) {
+    for (int i = 0; i < keybinds->size; i++)
+        if (keybinds->items[i].key == key)
+            return keybinds->items[i].action;
+    return ACTION_NOOP;
+}
