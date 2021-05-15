@@ -10,6 +10,7 @@ ncurses = dependency('ncurses')
 
 sources = files(
     'src/main.c',
+    'src/binds.c',
     'src/config.c',
     'src/csv.c',
     'src/input.c',
