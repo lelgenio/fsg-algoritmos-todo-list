@@ -1,5 +1,6 @@
 tests = [
     'binds.c',
+    'todo.c',
 ]
 
 foreach test : tests
@@ -16,5 +17,5 @@ foreach test : tests
         ]
     )
 
-    test(tests , exe)
+    test(test , exe)
 endforeach
