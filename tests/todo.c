@@ -13,8 +13,8 @@ int main() {
 
     assert_eq(todo_list.size, 2);
 
-    assert_eq(todo_list.first[1].title[0], 'm');
-    assert_eq(todo_list.first[1].title[1], 'y');
+    assert_eq(todo_list_query(&todo_list, 1)->title[0], 'm');
+    assert_eq(todo_list_query(&todo_list, 1)->title[1], 'y');
 
     todo_list_remove(&todo_list, 0);
     todo_list_remove(&todo_list, 1);
